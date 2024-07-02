@@ -1,0 +1,44 @@
+new instance
+************
+
+AIQ-dev_BH-vpn       i-0530caaceaa8061e8                10.250.105.60(IP)
+ 
+ 
+
+aiq-Instance ID: i-06b0a8f662cc4efdc (AiQ-AiQ-dev-env-VPN1)
+IP               : 10.250.105.8
+ 
+ 
+AIQ-simulator-vpn    i-035b692ad801a0c83                10.250.105.171
+
+
+*************************************
+ccp:
+https://launcher.myapps.microsoft.com/api/signin/803df661-ec87-48e6-b74e-82597410ba74?tenantId=36950d8b-d81d-4dca-9020-4bdd235ac334
+
+
+amazon Connect :
+
+https://launcher.myapps.microsoft.com/api/signin/9102bdaa-3826-465a-8186-7b333ad7c198?tenantId=36950d8b-d81d-4dca-9020-4bdd235ac334
+******************************************
+jenkins server
+
+URL : http://172.20.3.221:8080/
+Username: saikumar
+Password: Acqueon$321
+***********************
+Aiq access details
+URL : https://aiqdev.acqueonlab.com/
+Username : developer
+Password : Acqueon$321
+***********************
+idp
+
+https://aiqdev.acqueonlab.com/uaa
+
+MAGIC APPP
+ 
+Username: vijay8783@gmail.com
+Password:Vrishab42#
+
+************************revert the data stream reetntion peroid to 1 day****************

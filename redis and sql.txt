@@ -1,0 +1,121 @@
+
+REDIS_DB=0
+REDIS_PORT=6379
+REDIS_HOST=master.redis-aiq-dev-env.g89k7k.use1.cache.amazonaws.com
+REDIS_PASSWORD=
+SECURED_REDIS=True
+***********************************************************
+cd /opt/aiq-reports/core/redis-stable
+./src/redis-cli -h master.redis-aiq-dev-env.g89k7k.use1.cache.amazonaws.com --tls
+new one
+
+./src/redis-cli -h master.redis-aiq-test-acqueon-vpn.g89k7k.use1.cache.amazonaws.com --tls
+
+hgetall RT|AgentStats|VOICE|5564a9e0-3028-46b3-ab72-9a085d04409f
+
+********************
+MS sql
+**********
+DATABASE_PORT=1433
+DATABASE_HOST=database-1.cqv18805tsnh.us-east-1.rds.amazonaws.com
+DATABASE_NAME=aiq
+DATABASE_USER=admin
+DATABASE_KEY=QWNxdWVvbjUk
+DATABASE_SSLMODE=disable
+LANG=en_US.utf8
+
+updated one
+DATABASE_HOST=database-1.cqv18805tsnh.us-east-1.rds.amazonaws.com
+DATABASE_NAME=aiq
+DATABASE_USER=admin
+DATABASE_KEY=QWNxdWVvbjUk
+
+User name and password is :
+
+admin/ 31WAYcKa80HBYNg
+
+MzFXQVljS2E4MEhCWU5n
+
+new password:
+
+Dosm@1973
+Dosm1973
+
+
+
+cd /opt/aiq-reports/core/redis-stable
+./src/redis-cli -h master.redis-aiq-test-acqueon-vpn.g89k7k.use1.cache.amazonaws.com --tls
+
+REDIS_HOST=master.redis-aiq-dev-env.3kk3ii.use1.cache.amazonaws.com:6379
+
+./src/redis-cli -h master.redis-aiq-dev-env.3kk3ii.use1.cache.amazonaws.com --tls
+
+
+*****************
+redis keys
+*****************
+zrange  "state_changes|saikumar_j#acqueon_com" 0 -1
+ 
+EXISTS state_changes|saikumar_j#acqueon_com
+ 
+ 
+ 
+ 
+HGET agent_last_seen pramod_joshi#acqueon_com
+ 
+ 
+zset setting and getting
+ 
+ZADD myzset 1 "value1"
+ 
+ZADD myzset 1 "value1"
+ 
+retrive all elements from set
+zrange myzset 0 -1
+ 
+remove till particular position in zset
+ZREMRANGEBYLEX myzset - (value8
+ 
+will remove all elements from the sorted set
+ZREMRANGEBYLEX your_sorted_set_key - +
+ 
+ 
+hash setting and getting
+ 
+HSET zhash_values key1 value1
+HGET zhash_values key1
+
+
+************************revert the data stream reetntion peroid to 1 day****************
+
+
+zrange  "state_changes|saikumar_j#acqueon_com" 0 -1
+ 
+EXISTS state_changes|saikumar_j#acqueon_com
+ 
+ 
+ 
+ 
+HGET agent_last_seen pramod_joshi#acqueon_com
+ 
+ 
+zset setting and getting
+ 
+ZADD myzset 1 "value1"
+ 
+ZADD myzset 1 "value1"
+ 
+retrive all elements from set
+zrange myzset 0 -1
+ 
+remove till particular position in zset
+ZREMRANGEBYLEX myzset - (value8
+ 
+will remove all elements from the sorted set
+ZREMRANGEBYLEX your_sorted_set_key - +
+ 
+ 
+hash setting and getting
+ 
+HSET zhash_values key1 value1
+HGET zhash_values key1

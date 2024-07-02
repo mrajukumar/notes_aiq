@@ -1,0 +1,65 @@
+for aiq
+inbound
+Name SecuritygroupruleID IPversion Type Protocol Portrange Source       Description
+
+– sgr-04c0c8f448a94dfdd	IPv4	HTTPS		TCP	443			10.0.4.0/23	–
+
+– sgr-02145511dce44501d	IPv4	CustomTCP	TCP	6100 - 6107	10.0.4.0/23	AD communication PORTS
+
+– sgr-070dec0b6357ab5fd	–	    HTTPS		TCP	443			sg-0f836c3e14e24824c / AiQPrivateGroup-AiQ-dev-env	–
+
+– sgr-03f355779602c88d5	IPv4	Custom TCP	TCP	6400 - 6402	10.0.4.0/23	AD communication PORTS
+
+– sgr-0c76bdaeefe1d3c2c	IPv4	Custom TCP	TCP	2181		10.0.4.0/23	AiQ
+
+– sgr-093b92476235275c2	IPv4	All traffic	All	All			0.0.0.0/0	Enable Internet
+
+– sgr-068f4cf9812f1bb64	IPv4	MSSQL		TCP	1433		0.0.0.0/0	–
+
+– sgr-034bdf4bc96b5f511	IPv4	Custom TCP	TCP	6800 - 6804	10.0.4.0/23	AD communication PORTS
+
+– sgr-0f938e9698d297af5	IPv4	Custom TCP	TCP	9092 - 9094	10.0.4.0/23	AiQ
+
+– sgr-0258195310203b52f	IPv4	Custom TCP	TCP	6379		10.0.4.0/23	Redis PORT
+
+– sgr-073cde00669bab27e	IPv4	SSH			TCP	22			10.0.4.0/23	–
+
+– sgr-023c361494a637e42	IPv4	Custom TCP	TCP	6200 - 6204	10.0.4.0/23	AD communication PORTS
+outbound
+– sgr-010006fb800323f18	IPv4	Custom TCP	TCP	6100 - 6107	10.0.4.0/23	AD communication PORTS
+
+– sgr-02382e96987d05c04	IPv4	HTTPS		TCP	443			10.0.4.0/23	–
+
+– sgr-0cc97ae29f55599c7	IPv4	All traffic	All	All			0.0.0.0/0	Enable Internet
+
+– sgr-0af2a41a2985b18ca	IPv4	Custom TCP	TCP	6379		10.0.4.0/23	Redis PORT
+
+– sgr-0303f93d49465b449	IPv4	Custom TCP	TCP	6200 - 6204	10.0.4.0/23	AD communication PORTS
+
+– sgr-0d71b1fdac2ae2199	IPv4	Custom TCP	TCP	6400 - 6402	10.0.4.0/23	AD communication PORTS
+
+– sgr-0ec86ec9d375b47e0	IPv4	SSH			TCP	22			10.0.4.0/23	–
+
+– sgr-0afbc79abe02e0db7	IPv4	Custom TCP	TCP	6800 - 6804	10.0.4.0/23	AD communication PORTS
+
+for remote desktop -baston host
+–
+sgr-077af9192b4d35831	IPv6	SSH		TCP	22		::/0	–
+
+– sgr-0b685a083a990f17b	IPv6	HTTP	TCP	80		::/0	–
+
+– sgr-0c1f290b442d36b64	IPv4	HTTPS	TCP	443		0.0.0.0/0	–
+
+– sgr-0566a8b5b2b9ece8d	IPv4	SSH		TCP	22		0.0.0.0/0	–
+
+– sgr-020b2df4ac6ea44d6	IPv4	MSSQL	TCP	1433	0.0.0.0/0	–
+
+– sgr-00b6ea2e5fd77a66a	IPv4	RDP		TCP	3389	0.0.0.0/0	–
+
+– sgr-0aeb71696c653ca9b	IPv4	HTTP	TCP	80		0.0.0.0/0	–
+
+– sgr-0cf1148ac44af5e4a	IPv6	HTTPS	TCP	443		::/0	–
+
+
+for aiq simulater
+

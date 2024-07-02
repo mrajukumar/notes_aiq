@@ -1,0 +1,125 @@
+
+You are receiving this message because you have one or more Amazon MSK clusters running version 2.2.1 in the US-EAST-1 Region. Kafka version 2.2.1 will reach its end of life on June 8, 2024, and AWS will stop supporting it on Amazon MSK. Additionally, you can no longer create new clusters using version 2.2.1. Please use version 3.5.1 or higher while creating new clusters. Once AWS stops support for version 2.2.1, your Amazon MSK clusters using this version will be auto-upgraded to version 3.5.1. We require that you proactively upgrade your clusters to use version 3.5.1 or above before June 8, 2024. After June 8, 2024, we will auto-upgrade your cluster to version 3.5.1 if you are still using this version. This upgrade campaign aligns with MSK's version support policy, and adopting the recommended Kafka version will allow you to benefit from the latest Kafka and MSK features.
+A list of your affected resource(s) can be found in the 'Affected resources' tab of your AWS Health Dashboard.
+You can follow the steps in the AWS technical documentation [1] to upgrade your cluster to a Apache Kafka version 3.5.1 or above.
+You can initiate an upgrade of your MSK cluster to a newer supported Kafka version using the AWS Management Console or the AWS Command Line Interface (CLI). The upgrade process will result in a rolling restart of your brokers. To ensure client continuity during the rolling update that is performed as part of the upgrade process, we recommend the following best practices:
+1.	Set the topic replication factor (RF) to at least 2 for two-AZ clusters and at least 3 for three-AZ clusters. An RF of 1 can lead to offline partitions during patching.
+2.	Set minimum in-sync replicas (minISR) to at most RF - 1 to ensure the partition replica set can tolerate one replica being offline or under-replicated.
+3.	Make sure clients are configured to use multiple broker connection strings. Having multiple brokers in a client's connection string allows for failover if a specific broker supporting client I/O begins to be patched. For information about how to get a connection string with multiple brokers, see Getting the Bootstrap Brokers for an Amazon MSK Cluster [2].
+4.	We recommend that connecting clients are also upgraded to use 3.5.1 or above to benefit from the features available in the new version.
+5.	Do not use any tools or scripts that uses a client admin version older than 2.8.1 with the —zookeeper flag as this can trigger a known Kafka bug [3].
+If you have any questions or concerns, please reach out to AWS Support [4].
+[1]  https://urldefense.com/v3/__https://docs.aws.amazon.com/msk/latest/developerguide/version-support.html__;!!GRBPSLYk!8B_Yv79jhtjaWjh3AYkPrT5oUcLtF2uWJbzSh5L4pmSKwFhzxZn2cozelaAjYOb3fcgwbGeIpgbBbG9P7eJ8ky5KaAQvVwjJFPvABQ$  
+[2]  https://urldefense.com/v3/__https://docs.aws.amazon.com/msk/latest/developerguide/msk-get-bootstrap-brokers.html__;!!GRBPSLYk!8B_Yv79jhtjaWjh3AYkPrT5oUcLtF2uWJbzSh5L4pmSKwFhzxZn2cozelaAjYOb3fcgwbGeIpgbBbG9P7eJ8ky5KaAQvVwipNO3-qQ$  
+[3]  https://urldefense.com/v3/__https://issues.apache.org/jira/browse/KAFKA-14190__;!!GRBPSLYk!8B_Yv79jhtjaWjh3AYkPrT5oUcLtF2uWJbzSh5L4pmSKwFhzxZn2cozelaAjYOb3fcgwbGeIpgbBbG9P7eJ8ky5KaAQvVwhXj3doVQ$  
+[4] https://urldefense.com/v3/__https://aws.amazon.com/support__;!!GRBPSLYk!8B_Yv79jhtjaWjh3AYkPrT5oUcLtF2uWJbzSh5L4pmSKwFhzxZn2cozelaAjYOb3fcgwbGeIpgbBbG9P7eJ8ky5KaAQvVwiOW2Qu4A$
+Sincerely,
+Amazon Web Services
+
+
+
+
+
+Amazon MSK  2.2.1 ==>3.5.1
+A list of your affected resource(s) can be found in the 'Affected resources' tab of your AWS Health Dashboard.
+
+time taken to upgardfe kafka:
+https://repost.aws/knowledge-center/msk-upgrade-cluster-issues
+https://docs.aws.amazon.com/msk/latest/developerguide/bestpractices.html
+https://docs.aws.amazon.com/msk/latest/developerguide/msk-replicator-monitor.html
+
+to create replicater-->
+Amazon MSK
+Replicators
+Create replicator
+
+
+aws kafka describe-cluster --cluster-arn arn:aws:kafka:us-east-1:873558693027:cluster/kafka-aiq-dev-env/58282fe5-fcb1-45df-a4e0-2fdb7a0d866b-14
+
+
+Ensure that the replication factor (RF) is at least 3. Note that a RF of 1 can lead to offline partitions during a rolling update; and a RF of 2 may lead to data loss.
+  
+  
+ def createTopic(topicName, partitions=2, replicationFactor=2):
+  try:
+    admin_client = KafkaAdminClient(
+      bootstrap_servers=KAFKA_CLUSTER,
+      client_id='admin',
+      api_version=(0,10,1)
+    )
+	
+	
+	kafka python ios required for -->
+	
+	
+**************************************************************
+	
+1.	Set the topic replication factor (RF) to at least 2 for two-AZ clusters and at least 3 for three-AZ clusters. An RF of 1 can lead to offline partitions during patching.
+
+def createTopic(topicName, partitions=2, replicationFactor=2):
+  try:
+    admin_client = KafkaAdminClient(
+      bootstrap_servers=KAFKA_CLUSTER,
+      client_id='admin',
+      api_version=(0,10,1)
+    )
+	
+	in the code
+	
+2.	Set minimum in-sync replicas (minISR) to at most RF - 1 to ensure the partition replica set can tolerate one replica being offline or under-replicated.
+
+Suppose you have a Kafka topic with a replication factor (RF) of 3, meaning each partition of this topic has three replicas spread across different brokers for redundancy. Now, you want to configure the minimum in-sync replicas (minISR) setting.
+
+In this case, to ensure the partition can tolerate one replica being offline or under-replicated, you would set minISR to RF - 1. So, with an RF of 3, minISR would be set to 2.
+
+
+3.	Make sure clients are configured to use multiple broker connection strings. Having multiple brokers in a client's connection string allows for failover if a specific broker supporting client I/O begins to be patched. For information about how to get a connection string with multiple brokers, see Getting the Bootstrap Brokers for an Amazon MSK Cluster 
+
+4.	We recommend that connecting clients are also upgraded to use 3.5.1 or above to benefit from the features available in the new version.
+
+kafka -python
+
+
+5.	Do not use any tools or scripts that uses a client admin version older than 2.8.1 with the —zookeeper flag as this can trigger a known Kafka bug
+ try:
+    admin_client = KafkaAdminClient(
+      bootstrap_servers=KAFKA_CLUSTER,
+      client_id='admin',
+      api_version=(0,10,1)  /increase api
+    )
+	
+	
+	
+
+	
+		time started:10.5 am 12:17 am
+	2 brokers
+
+*****************************************************************************************
+
+Updating the Apache Kafka Version Using the AWS Management Console
+ 
+1. Navigate to the Amazon MSK console in the AWS Management Console.
+2. Select the MSK cluster for which you intend to update the Apache Kafka version.
+3. Within the Properties tab, locate and select the "Upgrade" option in the Apache Kafka version section.
+4. Select version 3.5.1 and click upgrade.
+5. Note that the migration process of Apache Kafka may require several hours to complete.
+6. During this migration period, try to make calls and change the states of agents.
+7. Access the AWS Timestream database to verify the successful insertion of data into their corresponding tables.
+8. Upon completion of the migration, deploy the new patch containing the latest Python client libraries.
+9. Thoroughly test the updated patch by making calls and altering states, ensuring that data is properly inserted into their respective tables.
+*
+
+
+
+
+
+
+
+
+
+*****************************************************************
+Lmbda
+aiq-auto-sync-->list agents and list queue from amazon connect in ui-->setting-->user managemnet-->sync
+for every 5 min
+aiq-billing-->for every 5 min

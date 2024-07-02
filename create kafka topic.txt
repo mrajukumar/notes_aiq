@@ -1,0 +1,6 @@
+docker build -itd acqueon/new-kinesis-consumer .
+
+
+docker exec kinesis-consumer bash -c "python3 -c 'from kafka_create_topic import *; createTopic(\"\", 1, 2)'"
+
+unprocessed-records-test

@@ -1,0 +1,320 @@
+{"log":"\u001b[1;33m[2023-09-04 05:59:42,578: WARNING/ForkPoolWorker-2] 9\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T10:59:42.579037475Z"}
+{"log":"\u001b[1;33m[2023-09-04 05:59:55,227: WARNING/ForkPoolWorker-2] task_received_time in ctr report\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T10:59:55.229026372Z"}
+{"log":"\u001b[1;33m[2023-09-04 05:59:55,228: WARNING/ForkPoolWorker-2] 2023-09-04 05:59:00.217735-05:00\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T10:59:55.229068886Z"}
+{"log":"\u001b[1;33m[2023-09-04 05:59:55,509: WARNING/ForkPoolWorker-2] AiQ_ctr_raw_data_20230904055900.csv\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T10:59:55.51599534Z"}
+{"log":"\u001b[1;33m[2023-09-04 05:59:55,509: WARNING/ForkPoolWorker-2] uploaded to s3 bucket\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T10:59:55.516049382Z"}
+{"log":"\u001b[1;33m[2023-09-04 05:59:55,515: WARNING/ForkPoolWorker-2] Completed generating raw report for CTR metrics\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T10:59:55.516056475Z"}
+{"log":"[2023-09-04 05:59:55,591: INFO/ForkPoolWorker-2] Task tasks.generate_ctr_raw_report[c5b7c34f-c373-4772-b254-6f6130313359] succeeded in 55.37414612155408s: 'Raw Report for CTR Generated'\r\n","stream":"stdout","time":"2023-09-04T10:59:55.591981886Z"}
+{"log":"[2023-09-04 06:00:00,029: INFO/MainProcess] Received task: tasks.generate_intraday_report[cdfe347b-ced1-45a9-9db5-e777e3d9bf8d]  \r\n","stream":"stdout","time":"2023-09-04T11:00:00.033162964Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:00,032: WARNING/ForkPoolWorker-8] Starting to generate intraday report\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:00.033190644Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,214: WARNING/ForkPoolWorker-8] Star date and end date and db_name for intraday report\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.220035744Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,214: WARNING/ForkPoolWorker-8] 2023-09-04 05:00:00.000000\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.220081166Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,214: WARNING/ForkPoolWorker-8] 2023-09-05 05:00:00.000000\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.220087327Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,214: WARNING/ForkPoolWorker-8] analytics\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.22009187Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,214: WARNING/ForkPoolWorker-8] Time Zone while generating the intraday_report\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.220096429Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,214: WARNING/ForkPoolWorker-8] US/Central\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.220100827Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,214: WARNING/ForkPoolWorker-8] Get Intraday Metrics\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.220105278Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,214: WARNING/ForkPoolWorker-8] 2023-09-04 05:00:00.000000\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.220123326Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,214: WARNING/ForkPoolWorker-8] 2023-09-05 05:00:00.000000\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.220128887Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,214: WARNING/ForkPoolWorker-8] analytics\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.220133596Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,857: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.859031484Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,921: WARNING/ForkPoolWorker-8] calls queued query -\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.923032525Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:01,922: WARNING/ForkPoolWorker-8] SELECT callid, agent, channel, initationmethod, dnis, ani, queue, measure_value::bigint, measure_name, time FROM analytics.callsqueued where (initialcalltype is NULL or initialcalltype in ('INBOUND')) and time between '2023-09-04 05:00:00.000000' and '2023-09-05 05:00:00.000000'\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:01.923089227Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:02,091: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:02.097034155Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:04,127: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:04.127983756Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:05,950: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:05.955967978Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:06,399: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:06.40003455Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:08,061: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:08.070419775Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:09,736: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:09.738049124Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:10,452: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:10.452999804Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:12,515: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:12.516011284Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:13,099: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:13.101016461Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:13,636: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:13.641022883Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:14,015: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:14.020010106Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:15,985: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:15.987171725Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:18,083: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:18.084010131Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:20,460: WARNING/ForkPoolWorker-8] If Block\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:20.465998594Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:20,837: WARNING/ForkPoolWorker-8] AiQ_smartsheet_intraday_20230904060000.csv\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:20.842380453Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:20,837: WARNING/ForkPoolWorker-8] uploaded to s3 bucket\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:20.842434121Z"}
+{"log":"\u001b[1;33m[2023-09-04 06:00:20,839: WARNING/ForkPoolWorker-8] Completed generating intraday report\u001b[0m\r\n","stream":"stdout","time":"2023-09-04T11:00:20.842442118Z"}
+{"log":"[2023-09-04 06:00:20,882: INFO/ForkPoolWorker-8] Task tasks.generate_intraday_report[cdfe347b-ced1-45a9-9db5-e777e3d9bf8d] succeeded in 20.850150355137885s: 'Intraday Report Generated'\r\n","stream":"stdout","time":"2023-09-04T11:00:20.883332266Z"}
+[centos@ip-10-0-5-136 aiq-reports]$ clear
+[centos@ip-10-0-5-136 aiq-reports]$ docker inspect aiqscheduler
+[
+    {
+        "Id": "ac7f9b3169cdffc0c24e4ee95b13c73a8dfad2bb4fdaede389987427e046d7ad",
+        "Created": "2023-09-04T10:46:00.681859581Z",
+        "Path": "celery",
+        "Args": [
+            "--app=aiqscheduler",
+            "worker",
+            "--concurrency=8",
+            "-O",
+            "fair",
+            "--loglevel=INFO"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 27829,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-09-04T10:46:02.123444705Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:b0d18c1fb02dfdc6f6ef5ea751e66ce5862b77f8fd2beb1fe9d8c29f70969514",
+        "ResolvConfPath": "/var/lib/docker/containers/ac7f9b3169cdffc0c24e4ee95b13c73a8dfad2bb4fdaede389987427e046d7ad/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/ac7f9b3169cdffc0c24e4ee95b13c73a8dfad2bb4fdaede389987427e046d7ad/hostname",
+        "HostsPath": "/var/lib/docker/containers/ac7f9b3169cdffc0c24e4ee95b13c73a8dfad2bb4fdaede389987427e046d7ad/hosts",
+        "LogPath": "/var/lib/docker/containers/ac7f9b3169cdffc0c24e4ee95b13c73a8dfad2bb4fdaede389987427e046d7ad/ac7f9b3169cdffc0c24e4ee95b13c73a8dfad2bb4fdaede389987427e046d7ad-json.log",
+        "Name": "/aiqscheduler",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/opt/aiq-reports/core:/opt/aiq-reports/core:rw",
+                "/opt/aiq-reports/core/var/tmp:/var/tmp:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {
+                    "max-file": "3",
+                    "max-size": "50m"
+                }
+            },
+            "NetworkMode": "aiq",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": [],
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges:true"
+            ],
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 50,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/df2f7b8048d97616d0568852859c302234ff5638db9b36f7cbf0c272971d826e-init/diff:/var/lib/docker/overlay2/6c8fc7419ad17bf0a694123bf20b7b1509d08a0ac8c23017440859c723b91a7e/diff:/var/lib/docker/overlay2/34e52fa3898476529dd80e61bbe904b675e927456521969a766ab61c9b9064c7/diff:/var/lib/docker/overlay2/8303268646c627f1f866666e158852973d58c2455a67cd8d53b5f38462298b6a/diff:/var/lib/docker/overlay2/d5415921af5ec7ff74948d7e92310e1eda9ae80e4298ab66f74cbbdfaca019cc/diff:/var/lib/docker/overlay2/49c4ebf15c971bc9c27a5d277a103504a61885fa4f179bb188e2f99494f48367/diff:/var/lib/docker/overlay2/ebcc4b27d38f1fbb836a62d708d51b4b7df17e23cffcdd405d38fcf40064c0c8/diff:/var/lib/docker/overlay2/0ddf55f29b17599561a525bbbcf56b4f900d1ef0d8147cbe3f8bfd9df938471d/diff:/var/lib/docker/overlay2/29b28d6831b8a089a067b21b9fcd56942ca50ef132ba465873a1628f8e15b725/diff:/var/lib/docker/overlay2/bc567014b9d879f654e5d1709d550b45e756ee2133b4a7c493345a24e3ca8f70/diff:/var/lib/docker/overlay2/096ee37a583d0f0cfbfe076a041a94e0b4630c5778b96424e0864f38f03104f5/diff:/var/lib/docker/overlay2/6dd3a0db50b45fd094c0dbef8ba35d883528aee3d6f583e251ec2d7446caa62a/diff:/var/lib/docker/overlay2/88d303f89ee0286fd28ad99e5be100d29954907e7f07cd3b703f090347e2fa83/diff:/var/lib/docker/overlay2/a7c48393a06ae70c7e4c70c97d440d04c5fa261d97843abb7b49c57543b61eff/diff:/var/lib/docker/overlay2/defbb832ffda2802a7fa228e1203ebacfcb477d990fd9cff833c5246ae89852f/diff:/var/lib/docker/overlay2/f5ac0f62ccedb2b6dc9876e034f3b6849659fac647db94362ec18d80a09bb6ca/diff:/var/lib/docker/overlay2/4704baa6832c3c14bdde40230b5f1cb58721c5ade0d168cab5d1ae8d6b17218c/diff:/var/lib/docker/overlay2/e3d4a94776033430641086e1962ba3312c5ce92c3d7ae3d391490c929210282e/diff:/var/lib/docker/overlay2/27f6fc9474eb14fb47f654c52ce1c8574c17de45fa08550c0d0f3b081396e3a3/diff:/var/lib/docker/overlay2/b5e2baf28833a2d67d387d9be74208b09b6443e04052f0964762c717da8c8fdd/diff:/var/lib/docker/overlay2/da57ab0dc3fde5171c0aaa49dbfc0b0959359036756f40c2e9df82fe506f07c7/diff:/var/lib/docker/overlay2/cbcc98f3453e2be623488d7d688b85d4a56f1704bfa3bbf0ce950874467ccc64/diff:/var/lib/docker/overlay2/279fffae813009c4332568c01ab2e1f3823ca77e1c8798da1a66d3eb68f53597/diff:/var/lib/docker/overlay2/880aedbe94470e4387aa535cf044f899ad1868340b09531b12080ce365e85890/diff:/var/lib/docker/overlay2/446a69c97e89b826bd809920cc4b1cc87f7322fbe8b606e3dc5314994430ecca/diff:/var/lib/docker/overlay2/710dcda6aa9ebce83e3f7b8f56687a5962d39e7a4cdacb9f39d3c6bd54563846/diff:/var/lib/docker/overlay2/dc7adc38a14aa7f698d3c547d24c4d45850d32ff23b7ee30975045e1936e758b/diff:/var/lib/docker/overlay2/4c1b096110e930ea5517fe84516cfee3f4c54fbda88605230cfd3380d54c9dff/diff:/var/lib/docker/overlay2/9b0d0ed278d82448923def0d4ea1e23d36a2a49719ad39e2affa785918e2f185/diff:/var/lib/docker/overlay2/b9587068a66c9df114e9b59aceab24c1a27046e139c4e1d0fad3ae1f92206771/diff:/var/lib/docker/overlay2/45a2e8300b1274dcef0ede971cd1c3b6779e2bcc51b16000a86d5ef03abc7de5/diff:/var/lib/docker/overlay2/91ecfa1b34c77ec53a26f2ec8a364736a258aba9642ae9c00b345e60d21e276e/diff:/var/lib/docker/overlay2/0c0e60705f60dd9cfa68346a4e696fa1d25c24292005a41f41c9c157de89b960/diff:/var/lib/docker/overlay2/3d7910baa0a32ae71cb9c0285def262b1fde5674dd7d8cc53016121cf2c534c1/diff:/var/lib/docker/overlay2/90e5ca0d9aa2bee6344c8a5a2cf360b6080d4fa298dd638025f697849cb29863/diff:/var/lib/docker/overlay2/2ed2b8d09ebd1d103f72d0add490d331d97bebafd3133743dfe718b8ebaa7701/diff:/var/lib/docker/overlay2/23df29e3a6672464589181bb143f4eed6f3c97f2a3999be27f792413c8a691e1/diff:/var/lib/docker/overlay2/0a5c2bb43ddb0b917922b848364731822292e58adf30ade9c1be0371e2e8fb00/diff:/var/lib/docker/overlay2/5dd32060eec1f0bca72a9cb9f1a99e87b98abb596bfc8b69beb1a0007c71ee5a/diff:/var/lib/docker/overlay2/1baf12b43091ca41dcc6385625dab7542d0c6d4a581cdbd9311109e8d390ed84/diff",
+                "MergedDir": "/var/lib/docker/overlay2/df2f7b8048d97616d0568852859c302234ff5638db9b36f7cbf0c272971d826e/merged",
+                "UpperDir": "/var/lib/docker/overlay2/df2f7b8048d97616d0568852859c302234ff5638db9b36f7cbf0c272971d826e/diff",
+                "WorkDir": "/var/lib/docker/overlay2/df2f7b8048d97616d0568852859c302234ff5638db9b36f7cbf0c272971d826e/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/opt/aiq-reports/core",
+                "Destination": "/opt/aiq-reports/core",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/opt/aiq-reports/core/var/tmp",
+                "Destination": "/var/tmp",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "ac7f9b3169cd",
+            "Domainname": "",
+            "User": "acqueon",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": true,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "TIMESTREAM_DB=analytics",
+                "REDIS_HOST=master.redis-aiq-dev-env.g89k7k.use1.cache.amazonaws.com",
+                "AWS_TIMESTREAM_REGION=us-east-1",
+                "SECURED_REDIS=True",
+                "REDIS_KEY_DURATION=3600",
+                "AWS_REGION=us-east-1",
+                "HTTPS_PROXY=",
+                "NO_PROXY=",
+                "INTRADAY_REPORT_DURATION=*/30",
+                "SUMMARY_REPORT_DURATION=23",
+                "CTR_REPORT_DURATION=23",
+                "AGENT_STATE_REPORT_DURATION=23",
+                "LOGIN_LOGOUT_REPORT_DURATION=23",
+                "SCHEDULER_TIME_ZONE=US/Central",
+                "S3_BUCKET_NAME=aiqdevenv-bkt",
+                "DATABASE_PORT=1433",
+                "DATABASE_HOST=database-1.cqv18805tsnh.us-east-1.rds.amazonaws.com",
+                "DATABASE_NAME=aiq",
+                "DATABASE_USER=admin",
+                "DATABASE_KEY=RG9zbUAxOTcz",
+                "DATABASE_SSLMODE=disable",
+                "LANG=en_US.utf8",
+                "REPORT_GENERATION_TIME=5",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "export=LANG=en_US.utf8"
+            ],
+            "Cmd": [
+                "celery",
+                "--app=aiqscheduler",
+                "worker",
+                "--concurrency=8",
+                "-O",
+                "fair",
+                "--loglevel=INFO"
+            ],
+            "Image": "acqueon/aiq-scheduler:1.1",
+            "Volumes": {
+                "/opt/aiq-reports/core": {},
+                "/var/tmp": {}
+            },
+            "WorkingDir": "/opt/scheduler",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "983c95928f1887e54d252ca13e8c9076380a79a51a0f857ad7b4f0177f6f87a6",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "aiq-reports",
+                "com.docker.compose.service": "worker",
+                "com.docker.compose.version": "1.23.2",
+                "org.label-schema.build-date": "20201113",
+                "org.label-schema.license": "GPLv2",
+                "org.label-schema.name": "CentOS Base Image",
+                "org.label-schema.schema-version": "1.0",
+                "org.label-schema.vendor": "CentOS",
+                "org.opencontainers.image.created": "2020-11-13 00:00:00+00:00",
+                "org.opencontainers.image.licenses": "GPL-2.0-only",
+                "org.opencontainers.image.title": "CentOS Base Image",
+                "org.opencontainers.image.vendor": "CentOS"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "e03f89519930c6b5eae5f6000ff2d24ff1391dcd6d85a80c9c06c7b2b805dee5",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/e03f89519930",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "aiq": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "worker",
+                        "ac7f9b3169cd"
+                    ],
+                    "NetworkID": "2fbf481c31b62839d5a93927f31271b7f90e650056b608adf0331209245752fe",
+                    "EndpointID": "ec310b2bdd3cb8d6b6254ecd05bbc1b4354337b583a724b125b71b713f4d7684",
+                    "Gateway": "192.168.112.1",
+                    "IPAddress": "192.168.112.7",
+                    "IPPrefixLen": 20,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:c0:a8:70:07",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

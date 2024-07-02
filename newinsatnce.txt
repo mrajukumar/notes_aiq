@@ -1,0 +1,72 @@
+old instance  10.0.5.136        new insatnce 10.250.105.8
+env files		                 env files
+7 env files                      7 env files
+1 server.json                    1 server.json
+4 docker-compose                2 out of 4 docker-compose
+
+
+docker --not working
+if try to start -->crashing ssh connection so need to reboot the system from other instance
+
+ ssh -i EPIC-Dev-KeyPair.pem centos@10.250.105.8
+
+
+
+db    : database-041023.cqv18805tsnh.us-east-1.rds.amazonaws.com
+redis : master.redis-aiq-test-acqueon-vpn.g89k7k.use1.cache.amazonaws.com
+kafka cluster :
+               b-1.kafkaaiqdevenvvpn.tgq1l7.c10.kafka.us-east-1.amazonaws.com:9092,b-2.kafkaaiqdevenvvpn.tgq1l7.c10.kafka.us-east-1.amazonaws.com:9092
+cluster ip: 
+z-3.kafkaaiqdevenvvpn.tgq1l7.c10.kafka.us-east-1.amazonaws.com:2181,z-2.kafkaaiqdevenvvpn.tgq1l7.c10.kafka.us-east-1.amazonaws.com:2181,z-1.kafkaaiqdevenvvpn.tgq1l7.c10.kafka.us-east-1.amazonaws.com:2181
+
+ 
+
+instance id:5f8118ad-5332-4cb0-8d31-de1659a8ee32
+SERVER_NAME=aiqdev.acqueonlab.com
+IDP_BASE_URL=https://aiqdev.acqueonlab.com
+**********************************************
+revproxy               Up 5 days
+uaa-core               Up 5 days
+uaa-frontend           Up 5 days
+aiq-rpt-core           Up 5 days
+aiq-rpt-frontend       Up 5 days
+aiq-rpt-rtkconsumer    Up 5 days
+aiqscheduler           Up 5 days
+kinesis-consumer-ctr   Up 5 days
+kinesis-consumer       Up 5 days
+aiqbeat                Up 5 days
+aiq-rpt-rtfeeder       Up 5 days
+
+revproxy 2-no error-insated of 4 errors we have
+uaa-core only half-
+uaa-frontend -no logs in both-
+aiq-rpt-core half same logs emperor burried-after sep 22 no logs due to ui issue
+aiq-rpt-frontend  -no logs in both--same
+aiq-rpt-rtkconsumer -no logs after kafka
+aiqscheduler -code issue
+kinesis-consumer for a while coming alive and later only connected
+kinesis-consumer for a while coming alive and later only connected
+aiqbeat-almost same
+aiq-rpt-rtfeeder --response is empty -->launch.py file
+unified portel-->ui end point error
+uwsgi-ui end point error
+rtk-consumer--last log in sep 14
+kinesisconsumer-menthined in mail
+kinesisconsumer ctr-menthined in mail
+
+
+==>insatnce is launched through AMI .does it effect the application
+==>are these changes enough or do we need to do more changes
+==>jenkins is same for new insatnce or do you need to chnage anything in jenkins for new instance
+==>if same then same code is not reflecting in the new insatnce
+
+
+
+
+
+sudo docker login --username acqueoncc 
+give password : Change@123
+
+
+
+Dosm@1973

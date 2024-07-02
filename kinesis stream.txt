@@ -1,0 +1,4 @@
+•	With Suhal's assistance, we were able to resolve the issue and are now able to get events from Amazon Connect.
+•	We made the following changes to the demo server's kinesis.env file:
+o	Changed the value of the AWS_KINESIS_STREAM_NAME   variable from AiQ-dev-env-AiQAgentStream to aiq_test_opayo_agent for agent stream
+o	Changed the value of the AWS_KINESIS_STREAM_NAME   variable from AiQ-dev-env-AiQCTRStream to aiq_test_opayo_agent for CTR.

@@ -1,0 +1,113 @@
+deployment
+*************
+sudo /opt/aiq-reports/corectl                 ./corectl
+sudo /opt/aiq-reports/corectl status  or      ./corectl status
+sudo /opt/aiq-reports/corectl stop    or      ./corectl stop
+next 
+sudo docker login --username acqueoncc 
+give password : Change@123
+sudo ./corectl pull                        or      sudo /opt/aiq-reports/corectl pull         
+sudo ./corectl start 					  or      sudo /opt/aiq-reports/corectl start    
+
+kafka logs=--> docker logs -f aiq-rpt-rtkconsumer
+docker logs -f container name
+image to cointainer
+ docker run -d --name=aiq-rpt-rtkconsumer66 acqueon/aiq-rpt-core:1.1
+ docker run -d --name=aiq-rpt-rtkconsumer77 acqueon/aiq-rpt-core:1.1
+
+docker exec -it conatiner name bash --> to enter into running contaniner in interactive mode
+
+Docker commands
+Sudo apt-get update
+Docker --version
+Sudo apt-get install docker.io -->to install docker 
+Or script method from get.docker.com
+
+# 1. download the script
+#   $ curl -fsSL https://get.docker.com -o install-docker.sh
+# 2. verify the script's content
+#   $ cat install-docker.sh
+# 3. Sudo chmod +x filename.sh
+# 4. run the script either as root, or using sudo to perform the installation.
+#   $ sudo sh install-docker.sh
+Docker --version
+-->From images we get containerss
+hub.docker.com--. Images will be downloaded fronm this site
+To down load image
+-->docker pull ubuntu -->to download ubuntu images
+-->docker pull centos --> to download centos image
+-->docker images --> to list docker images
+-->docker run -it image_name --> to convert image to container and run it
+-lt -->interative terminal[after starting it will enter into docker]
+-ltd-->interactive mode with detach mode[that means after starting it will not enter into contanier]
+-->exit -->exit from the container but contanier will stop
+-->Ctrl+p+q -->exit from conatniner with out stopping conatnier
+-->docker ps -->list docker contannier
+-->docker ps -a -->list all the containers that are running and that are stopped
+--> docker rename oldname newname -->to rename a containner
+-->docker start cid -->start container
+-->docker stop cid -->to stop conatniner
+-->docker restart cid --> to restart conatniner
+-->docker attach cid-->command to enter into running container
+-->docker rm cid -->to delete conatbiner
+-->opt/aiq-reports/corectl start -->command to pull the images and up the docker containers
+-->/opt/aiq-reports/corectl stop -->stop the running services
+-->docker-compose -f {path to docker-compose.yml} down
+Docker rm cid -f -->to delete with force
+-->docker rmi imageid --> to delete docker image
+docker logs -f container name
+docker image ls
+docker ps
+ping database-1.cqv18805tsnh.us-east-1.rds.amazonaws.com
+
+
+
+
+
+Image Commands:
+docker-compose logs -f kinesis-consumer > /opt/aiq-reports/latest.txt  --> to print logs in the file
+docker images --> List all the images available on your system.
+docker pull <image_name>:<tag>: Download an image from a registry.
+docker build -t <image_name>:<tag> <path_to_dockerfile>: Build a Docker image from a Dockerfile.
+Container Commands:
+docker ps  -> List all running containers.
+docker ps -a  --> List all containers (including stopped ones)
+docker run <image_name>:<tag>: Create and start a container from an image.
+docker start <container_id or name> --> Start a stopped container.
+docker stop <container_id or name> --> Stop a running container
+docker restart <container_id or name> --> Restart a container
+docker rm <container_id or name> --> Remove a stopped container
+docker exec -it <container_id or name> <command> --> Run a command inside a running container
+eg:sudo docker exec -i -t kenesis-consumer bash
+logs
+docker logs <container_id or name> --> View the logs of a container.
+docker inspect <container_id or name> --> Display detailed information about a container.
+docker stats  --> Display live streaming usage statistics of containers.
+
+docker exec -it aiqscheduler bash-->
+
+
+docker logs -f aiq-rpt-rtkconsumer | grep "SIM-1-S_Agent"
+
+ docker inspect --format='{{.LogPath}}' kinesis-consumer
+ 
+ docker inspect --format='{{.LogPath}}' aiq-rpt-rtkconsumer
+ 
+ ./
+ 
+ docker logs -f 
+ 
+ sudo docker exec aiqscheduler bash -c "python3 -c 'from schedulerapp.generate_smartsheets import *; generate_report(\"2023-09-15\",\"ctr_raw_data\")'"
+ 
+ docker save acqueon/aiq-rpt-rtkconsumer:1.1 > aiq-rpt-rtkconsumer-1.1.tar
+ 
+ 
+ docker exec kinesis-consumer ls /opt/kconsumer/
+ 
+
+
+ docker cp kinesis-consumer:/opt/kconsumer/backup.json .
+
+toremove :  docker exec -u root kinesis-consumer rm /opt/kconsumer/backup.json
+
+docker cp /opt/aiq-reports/kinesismarchtest.py kinesis-consumer:/opt/kconsumer/

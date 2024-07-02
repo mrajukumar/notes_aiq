@@ -1,0 +1,70 @@
+
+aws==>kinesis==>rtkafka==>timestream (database)==>aiq_reports==>dumping in to amazon s3 bucket==>client will use this data
+
+chnages
+env.aiqschedular -->31 line
+task.py
+celery.py-->added variable
+genratesmartsheets.py-->get_report_date(report_date):
+schedularapp-util.py-->added condtion for utc function
+dockerfile-->added variable
+
+
+sol:
+create code tar file of the project.do it in the remote server 
+command: docker save acqueon/aiq-rpt-core:1.1 > aiq-rpt-core-1.1.tar
+
+postdeploment script
+
+
+
+rona
+******
+due to abondened calls it is getting error
+time stream we will have itbut in ctr we dont have 
+
+
+kafka logs=--> docker logs -f aiq-rpt-rtkconsumer
+
+
+ui issue
+***********
+aws -->kenesis stream-->kafkaconsumer --> redis and time stream
+
+aws connect   == dashboard      dashboard  sync==>mssql
+simulater     == dashboard      dashboard  sync==>mssql
+
+sol:
+We need to make changes to the `hashgetall` method in multiple classes within the `RT_Dashboard.py` file. Specifically, you want to change the database parameter from "0" to "1" for these classes:
+
+ 
+
+1. `getagentready` -> `0 to 1`
+
+2. `getcontactsonhold` -> `0 to 1`
+
+3. `getrtagentsAcw` -> `0 to 1`
+
+4. `getrtragentserror` -> `0 to 1`
+
+5. `getagentsnonproductive` -> `0 to 1`
+
+6. `getrtagentstates` -> `0 to 1`
+
+7. `getcontactsonholdbyqueue` -> `0 to 1`
+
+8. `getcontactsonholdbyagent` -> `0 to 1`
+
+9. `getagentstats` -> `0 to 1`
+
+10. `getagentstatesdrilldown` -> `0 to 1` (here we need to change in 2 hashgetall methods in the same class)
+When there is need of change in the MSSQL password ,we need to update the encoded base 64 password in the environment files in the server.
+We need to change three environment files.
+1.envfile.core in the /opt/aiq-reports/core
+2.env.aiqscheduler in the /opt/aiq-reports/scheduler
+3.envfile.uaa in the /opt/aiq-reports/uaa
+In the envfile.core and env.aiqscheduler files, we need to update the database key with the encoded base64 key.
+
+But in the envfile.uaa file to get the encrypted password execute the below command in the server in the “/opt/aiq-reports” path.
+Command: sudo docker exec uaa-core bash -c "python3.6 manage.py encrypt Password"
+Eg: sudo docker exec uaa-core bash -c "python3.6 manage.py encrypt Dosm@1973"

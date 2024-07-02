@@ -1,0 +1,80 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.security.SecureRandom;
+
+ 
+
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.security.cert.X509Certificate;
+
+ 
+
+public class PendingCallbackCheck {
+
+
+
+    public static void main(String[] args) {
+        String username = "91624209-2c78-413a-aa85-17654a3a524b";
+        String password = "a9638a9e-a9ae-4a1c-abc5-076c78650852";
+        String apiUrl = "https://aeamazonimpllab.aecdevops.com/ImplAECWebservice/api/LCM/CreateContacts";
+        HttpsURLConnection connection = null;
+        try {
+
+            // Disable SSL/TLS verification
+//            
+//            SSLContext sc = SSLContext.getInstance("TLS");
+//            sc.init(null, trustAllCerts, new SecureRandom());
+//            HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+
+ 
+
+            // Create URL object
+
+
+            URL url = new URL(apiUrl);
+
+            // Open connection
+             connection = (HttpsURLConnection) url.openConnection();
+
+//             SSLSocketFactory socketFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
+//             ((HttpsURLConnection) connection).setSSLSocketFactory(socketFactory);
+
+             System.setProperty("https.protocols", "SSL");
+
+            // Set request method
+            connection.setRequestMethod("POST");
+
+            // Set Basic Authentication header
+            String authHeader = "Basic " + username + ":" + password;
+            connection.setRequestProperty("Authorization", authHeader);
+
+            // Get the response
+            int responseCode = connection.getResponseCode();
+
+            // Read the response body
+            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            StringBuilder response = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                response.append(line);
+            }
+            reader.close();
+
+            // Process the response
+            System.out.println("Response Code: " + responseCode);
+            System.out.println("Response Body: " + response.toString());
+
+            // Close the connection
+            connection.disconnect();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}

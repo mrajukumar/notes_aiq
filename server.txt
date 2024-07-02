@@ -1,0 +1,222 @@
+844-682-1683 did number for saml-->==>basic queue
+ 
+844-682-1681 did number for saml --> ==>zenius_queue
+**********************
+Team - AWS Credentials
+
+if you want to create a new conatiner we have image in prd server.just use this image in docker compose file and mage docker compose up -d
+
+https://dev-aiq-acqueon.signin.aws.amazon.com/console
+Username: sai@zeniusit.com
+Password: Zenius123$%^
+
+**************************************************
+ccp 
+https://aiqtest-connect.awsapps.com/connect/ccp-v2
+
+AWS connect agent login:
+https://aiqtest-connect.awsapps.com/connect/login
+Username: Bagent160
+Password: Agent@123
+Username: Bagent162
+Password: Agent162@123
+
+**************************************************
+Jump server details
+IP: 54.156.121.86
+username: Administrator
+Password: I0?)YQSAPz69nd0;@m0VQ7sUGuBc2fBX
+
+**************************************************
+
+Aiq access details
+URL : https://aiqdev.aecdevops.com/
+Username : developer
+Password : Acqueon$321
+
+**************************************************
+
+https://acqueon.awsapps.com/start/#/
+jenkins 
+http://172.20.3.221:8080/
+svn path
+https://svn.acqueon.com/svn/aiqreports/tags/0.4_ts/tsmigration/aiqscheduler
+
+
+
+**************************************************
+jenkins server
+
+URL : http://172.20.3.221:8080/
+Username: saikumar
+Password: Acqueon$321
+
+**********************
+SQL credentials:
+
+Username: sa
+Password: acqueon5@
+
+admin/Acqueon5$
+
+
+****************************
+vpn
+
+VPN : garden.acqueon.com
+
+UserID: saikumar.j
+
+Password: Zenius@123
+
+
+**************************************************
+
+in aiq
+opt/aiq/aiq-reports/core/var/log -->to check logs
+opt/aiq/aiq-reports/core/envfile.core --> path for environment variables-->you can check redis db
+in the root --> aiq -->server.json --> to get redis data base config
+opt/aiq/aiq-reports/core/rtkconsumer --> details for kafka consumer
+opt/aiq/aiq-reports/corectl stop -->stop all the containers
+opt/aiq/aiq-reports/corectl start -->start all the conatiners
+                     corectl pull -->
+
+**************************************************
+
+python -m venv myenv  -->create virtual environment
+myenv\Scripts\activate  -->activate virtual environment
+pip install -r requirements.txt -->
+python -m compileall ./    
+
+**************************************************
+
+https://aiqdev.aecdevops.com/aiq/api/getcallsinqueue
+https://aiqdev.aecdevops.com/aiq/api/getagentsoncall
+https://aiqdev.aecdevops.com/aiq/api/getchatsinqueue
+https://aiqdev.aecdevops.com/aiq/api/getchatsinprogress
+https://aiqdev.aecdevops.com/aiq/api/getcallsinqueuechart
+https://aiqdev.aecdevops.com/aiq/api/getoldestcontactinqueue
+https://aiqdev.aecdevops.com/aiq/api/getcallsinprogressbyqueue
+https://aiqdev.aecdevops.com/aiq/api/getchatsinprogressbyqueue
+
+**************************************************
+
+"RDS_DATABASE_PORT":"1433"
+,"RDS_DATABASE_HOST":"database-1.cqv18805tsnh.us-east-1.rds.amazonaws.com",
+"RDS_DATABASE_NAME_AIQ":"aiq",
+"RDS_DATABASE_NAME_UAA":"uaa",
+"RDS_DATABASE_USER":"admin",
+"RDS_DATABASE_PASSWORD":"QWNxdWVvbjUk",
+
+**************************************************
+old insatnce
+AIQ-dev-BH    		 i-0aa4234324e102943				10.0.4.152      
+ 
+ 
+AiQ-AiQ-dev-env      i-0f8f6f9f3f8f3e306             	10.0.5.136
+ 
+ 
+AIQ-simulator        i-0a8743681ed0a3801             	10.0.5.179
+ 
+ 
+new instance
+AIQ-dev_BH-vpn       i-0530caaceaa8061e8                10.250.105.60(IP)
+ 
+ 
+
+Instance ID: i-06b0a8f662cc4efdc (AiQ-AiQ-dev-env-VPN1)
+IP               : 10.250.105.8
+ 
+ 
+AIQ-simulator-vpn    i-035b692ad801a0c83                10.250.105.171
+
+
+*****************************************************
+
+[15:15] Mukka Gopi Raju
+https://launcher.myapps.microsoft.com/api/signin/803df661-ec87-48e6-b74e-82597410ba74?tenantId=36950d8b-d81d-4dca-9020-4bdd235ac334
+[15:16] Mukka Gopi Raju
+new ccp
+
+https://launcher.myapps.microsoft.com/api/signin/803df661-ec87-48e6-b74e-82597410ba74?tenantId=36950d8b-d81d-4dca-9020-4bdd235ac334
+
+
+Sign in to your account
+ 
+
+
+Amazon Connect new instance
+
+
+ccp:
+https://launcher.myapps.microsoft.com/api/signin/803df661-ec87-48e6-b74e-82597410ba74?tenantId=36950d8b-d81d-4dca-9020-4bdd235ac334
+
+
+amazon Connect :
+
+https://launcher.myapps.microsoft.com/api/signin/9102bdaa-3826-465a-8186-7b333ad7c198?tenantId=36950d8b-d81d-4dca-9020-4bdd235ac334
+
+\
+
+Sign in to your account
+
+Sign in to your account
+***************************
+
+
+[28-09 15:07] Ashok Reddy
+docker save acqueon/aiq-rpt-core:1.1 > aiq-rpt-core-1.1.tar
+
+	docker save acqueon/aiq-rpt-frontend:1.1 > aiq-rpt-frontend-1.1.tar
+
+	docker save acqueon/kinesis-consumer:1.1 > kinesis-consumer-1.1.tar
+
+	docker save acqueon/aiq-rpt-rtfeeder:1.1 > aiq-rpt-rtfeeder-1.1.tar
+
+	docker save acqueon/aiq-rpt-rtkconsumer:1.1 > aiq-rpt-rtkconsumer-1.1.tar
+
+	docker save acqueon/aiq-scheduler:1.1 > aiq-scheduler-1.1.tar
+
+	docker save acqueon/uaa-core:3.2.2 > uaa-core-3.2.2.tar
+
+	docker save acqueon/uaa-frontend:3.2.2 > uaa-frontend-3.2.2.tar
+
+	docker save acqueon/aiq-revproxy:1.1 > revproxy.tar
+	******************
+	
+	[15:08] Mukka Gopi Raju
+Svn credentials:- 
+
+username : pramod.joshi
+
+password : Zenius@123456789
+
+UserID: saikumar.j
+Password: GreenWorld@123
+GreenWorld@123
+
+************************revert the data stream reetntion peroid to 1 day****************
+
+*****************************
+
+kinesis consumer -->knesis consuker-->for toek issue-->exit is in comment
+
+ to create tar from image for frod 
+ ***********************************
+docker save aiq-rtkconsumer-qa:3.1 > aiq-rtkconsumer-qa:3.1.tar
+
+[16:34] Aman, Mohammed
+https://acqueon.sharepoint.com/:u:/s/Aman/ETZZ2gfgY-NKoybSGBqG1PQBaT_8w0XNBgvVv-sHBYdKUQ?e=BpTJLY
+
+
+******************************************************
+https://aiqdev.acqueonlab.com//djadmin
+sysadmin
+$3Rv!0n@1Z3
+
+
+
+
+
+
+

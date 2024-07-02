@@ -1,0 +1,28 @@
+3.api issue
+***********
+1ocal syatem
+webapi is in -->4.migrations...
+changes
+webapi-->aiq-->settings.py
+webapi-->graphiteapp-->views-->rtdashboard
+init.py--> in
+grahiteapp-->views.py
+wsapp-->views-->oauth-->init
+wsapp-->views-->usermodules-->init
+wsapp-->views-->administarion-->init
+graphitr app-->redis.util --> prnit logs
+
+jenkins
+*******
+dashboard-->analyticsaws-->aiq-rpt-core
+
+logs:/opt/aiq-reports/core/var/log/wsapp_info.log
+in aiq instance
+
+1.issue chnages
+util.py
+task.py
+celery.pyenv
+generatesheets.py
+url
+env.aiqschedular

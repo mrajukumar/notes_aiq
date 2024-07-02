@@ -1,0 +1,22 @@
+json data agent1 ['pramod.joshi@acqueon.com', 'saikumar.j@acqueon.com']
+ben
+response 1
+response : {'saikumar_j#acqueon_com': '1705899759.739:available:', 'pramod_joshi#acqueon_com': '1705899836.026:available:'}
+json data {'queues': ['101_BasicQueue', '101_zenius_queue'], 'agents': ['pramod.joshi@acqueon.com', 'saikumar.j@acqueon.com']}
+json data agent in if loop ['pramod.joshi@acqueon.com', 'saikumar.j@acqueon.com']
+inside for loop4
+response items dict_items([('saikumar_j#acqueon_com', '1705899759.739:available:'), ('pramod_joshi#acqueon_com', '1705899836.026:available:')])
+agent-email saikumar.j#acqueon.com
+mail saikumar.j@acqueon.com
+inside ifstatement
+state available
+count in for loop 1
+inside for loop4
+response items dict_items([('saikumar_j#acqueon_com', '1705899759.739:available:'), ('pramod_joshi#acqueon_com', '1705899836.026:available:')])
+agent-email pramod.joshi#acqueon.com
+mail pramod.joshi@acqueon.com
+inside ifstatement
+state available
+count in for loop 2
+before assiging  {} 2
+after assigning {'Available': 2, 'Agents': 2, 'IA': '0%', 'GA': '0%'}

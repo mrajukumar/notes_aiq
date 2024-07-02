@@ -1,0 +1,138 @@
+************************revert the data stream retntion peroid to 1 day****************
+-->docker compose file-->read onlt from true to false plaes erevert it
+
+read_only: true
+
+docker cp /opt/aiq-reports/test.txt. kinesis-consumer:/opt/kconsumer/
+
+docker cp /opt/aiq-reports/kinesis_consumer1.py  kinesis-consumer:/opt/kconsumer/
+cd /opt/aiq-reports/core/var/log
+NAProdConnectKinesisCTR: shard id :uncp
+
+
+                even_timestamp = datetime.strptime(event_timestamp_str, "%Y-%m-%dT%H:%M:%S.%fZ")
+				
+                even_timestamp1 = datetime.strptime(event_timestamp_str, "%Y-%m-%dT%H:%M:%S.%f%z")
+				print('even_timestamp1',even_timestamp1)
+                even_timestamp = even_timestamp1.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
+				
+
+docker cp /opt/aiq-reports/test.txt. kinesis-consumer:/opt/kconsumer/
+
+docker cp /opt/aiq-reports/kinesis_consumer3.py  kinesis-consumer:/opt/kconsumer/
+docker cp /opt/aiq-reports/redis_database.py  kinesis-consumer:/opt/kconsumer/
+docker cp /opt/aiq-reports/  kinesis-consumer:/opt/kconsumer/
+
+
+
+docker cp /opt/aiq-reports/planB.py kinesis-consumer:/opt/kconsumer/
+
+
+SELECT * FROM "analytics"."agent_state" WHERE time between ago(150000m) and now() ORDER BY time DESC LIMIT 10 
+
+sudo chmod 777 -R td.py agentstate.py td.sh agentstate.sh
+docker cp /opt/aiq-reports/td.py aiqscheduler:/opt/scheduler/
+docker cp /opt/aiq-reports/agentstate.py aiqscheduler:/opt/scheduler/
+\
+
+try:
+    query = """ SELECT callid FROM "analytics"."callsanswered" WHERE time between '2023-12-07 06:00:00.000000000' and '2024-02-07 06:00:00.000000000' """
+    #print('query ',query )
+    # Execute the query
+    response = client.query(QueryString=query)
+    #print('response ',response )
+
+    # Extract and print the results
+    for row in response['Rows']:
+         #print('forlop')
+         data = [datum['ScalarValue'] for datum in row['Data']]
+         print(data)
+
+except Exception as e:
+    print("An error occurred:", e)
+	
+	
+	docker cp /opt/aiq-reports/duplicatetest.py aiq-rpt-rtkconsumer69:/opt/kconsumer
+
+
+	docker cp /opt/aiq-reports/flush2timestream.py aiq-rpt-rtkconsumer69:/opt/kconsumer
+	docker cp /opt/aiq-reports/kinesis_testing_agent.txt aiq-rpt-rtkconsumer69:/opt/kconsumer
+	
+	docker cp /opt/aiq-reports/kafka_processbha.py aiq-rpt-rtkconsumer69:/opt/kconsumer
+	docker cp /opt/aiq-reports/kinesis_testing_agent.txt aiq-rpt-rtkconsumer69:/opt/kconsumer
+	docker cp /opt/aiq-reports/data.json aiq-rpt-rtkconsumer69:/opt/kconsumer
+	docker cp /opt/aiq-reports/backup2.json aiq-rpt-rtkconsumer69:/opt/kconsumer
+	
+	docker cp /opt/aiq-reports/kafka_processbha.py aiq-rpt-rtkconsumer69:/opt/kconsumer
+	docker cp /opt/aiq-reports/sample.txt aiq-rpt-rtkconsumer69:/opt/kconsumer
+
+docker cp /opt/aiq-reports/kafka_processnag.py aiq-rpt-rtkconsumer69:/opt/kconsumer
+docker cp /opt/aiq-reports/output_chunkag.txt aiq-rpt-rtkconsumer69:/opt/kconsumer
+
+
+docker cp /opt/aiq-reports/aggregator.py aiq-rpt-rtkconsumer77:/opt/kconsumer
+docker cp /opt/aiq-reports/kconsumer_redis_ctr.py aiq-rpt-rtkconsumer77:/opt/kconsumer
+docker cp /opt/aiq-reports/ctr_success.json aiq-rpt-rtkconsumer77:/opt/kconsumer
+
+
+
+docker cp /opt/aiq-reports/redis_database.py aiq-rpt-rtkconsumer:/opt/kconsumer
+
+Steps:
+******
+command to split large file into small files
+split -b 500m large_file.txt output_chunk
+1.suucees and failure logs to separe files along with attribute
+
+
+
+docker cp /opt/aiq-reports/aggregator.py aiq-rpt-rtkconsumer97:/opt/kconsumer
+docker cp /opt/aiq-reports/rtkplanb.py aiq-rpt-rtkconsumer77:/opt/kconsumer
+docker cp /opt/aiq-reports/ctr_success.json aiq-rpt-rtkconsumer77:/opt/kconsumer
+
+
+
+
+docker cp /opt/aiq-reports/kafka_process2.py aiq-rpt-rtkconsumer19:/opt/kconsumer
+
+
+
+
+docker cp /opt/aiq-reports/uat.py aiq-rpt-rtkconsumer:/opt/kconsumer
+
+
+kinesis
+**********
+ 
+ 
+docker exec kinesis-consumer ls /opt/kconsumer/
+
+ 
+ 
+to container : docker cp kinesis-consumer:/opt/kconsumer/backup.json .
+docker cp aiq-rpt-rtkconsumer:/opt/kconsumer/aggregator.py .
+ 
+toremove :  docker exec -u root kinesis-consumer rm /opt/kconsumer/backup.json
+ 
+steps to run the scriprs
+*************************
+ 
+frst take the sequencce numbers for the date feb 28 time at 11.00 pm for all shards and  set in redis
+now  run the scripts for patch 1 ie;0-4...next 4-8,8-12,12-16
+after running for day march 1.now for day 2.taake the sequnce numbers for shrads forrrm logs file for 0-4,4-8,8-12,12-16.you can see in vides or sech by 
+Shard_Id : shardId-000000000363
+Shard_Id : shardId-000000000364
+at time 11:00 pm 
+collect the sequnece number sand update in redisnow again run scripy same as from above
+ 
+cd /opt/aiq-reports/
+cd /opt/aiq-reports/core/var/logs
+docker cp /opt/aiq-reports/kinesismarchtest.py kinesis-consumer:/opt/kconsumer/
+docker cp /opt/aiq-reports/backup.json kinesis-consumer:/opt/kconsumer/
+ 
+docker cp kinesis-consumer:/opt/kconsumer/backup.json .
+ 
+ 
+SELECT * FROM "analytics"."agent_state" WHERE time between '2024-3-5 06:00:00.000000000' and '2024-3-6 06:00:00.000000000'
+ 
+SELECT * FROM "analytics"."agent_login_logout" WHERE time between '2024-3-5 06:00:00.000000000' and '2024-3-6 06:00:00.000000000'

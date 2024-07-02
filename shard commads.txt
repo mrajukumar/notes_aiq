@@ -1,0 +1,16 @@
+aws kinesis get-shard-iterator --stream-name aiq_test_opayo_agent   --shard-id shardId-000000000014   --shard-iterator-type AT_TIMESTAMP   --timestamp 2024-01-22T00:00:58.00Z   --region us-east-1
+
+
+aws kinesis get-records --shard-iterator AAAAAAAAAAE421Cbx5doKVNRkZEEXI3HN3dqwsGVbcFutHdvrSgFMhMes3Eczpzl/rjXzEbUHI72Ih6lD7DCqGYcp3IKWvbjkcZiqnC7/nxCUeinJqcL4583AFtZmq8WQ9HkVcWX9FQzUUyyXC4wYFpmY9L9ik1JxPrMXBULOAB6koZaPKHt/uUIvsOoxSSmk5A1P7QdRA+KSnRWDYj+uWZioSpETu4xAxNwms5+7KsiT00KSz8DSHaYS4abP0dAHsD0OMYWCTdqopVe3fXnjll+7/LpA+me
+
+
+aws kinesis get-records --shard-iterator 
+AAAAAAAAAAGwFlNo/kft6mzKDcXA+Idz275s+fQycutCikfxoh3xL4sbTFGADKYt4AisT6KsZdbsCwgsl1j7rcrNjeMCU8Er7yLiRzgZfrhqU9uQ/OYk1Yztx15i8IyCwhom+/V7fD8H1kFgtGfM6OhCghARnBXFZoUJtFpFmsaUb6lP6CIZy/72UU2EVdgV+wCjnWuC0xbdl5qkMhOdixORsNPyBDTabT4vR0kACNqOM/kfHBONFBbUI4iHIy6N2t+KGWiaR5M=
+
+
+
+
+aws kinesis get-shard-iterator --stream-name aiq_test_opayo_ctr   --shard-id shardId-000000000015   --shard-iterator-type AT_TIMESTAMP   --timestamp 2024-03-09T00:00:58.00Z   --region us-east-1
+
+
+aws kinesis get-records --shard-iterator AAAAAAAAAAF+24i64UP4ddsZAed2VDx68Y+OFQUMryRGYagq9LeBdWqtAed6Pn6Z4WdtZkC7YcTgi3zADXRDYSIy1Tloi+xvLFw7wPQ80W9zdPRDcSeZh0UA/w2rJ/X7eOjhfldr3OlJ3xaY/Slw46nD8ok1/hR5Nx8amubnD0S7miD2KnnYFymK7Z+JPUTVFe80IoMP7h4O4p38wq5C3Cf+mN5L0gythSP+/QxNPrir5wBv/V5Lh2yyz1gyiDrui+87Ov/lPRHdHQSDdtkATmCkU/Hrik2Y"

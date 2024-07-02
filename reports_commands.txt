@@ -1,0 +1,5 @@
+sudo docker exec aiqscheduler bash -c "python3 -c 'from schedulerapp.generate_smartsheets import *; generate_report(\"2023-11-09\",\"agent_login_logout_report\")'"
+sudo docker exec aiqscheduler bash -c "python3 -c 'from schedulerapp.generate_smartsheets import *; generate_report(\"2023-11-09\",\"agent_aux_reports\")'" --state chnage
+sudo docker exec aiqscheduler bash -c "python3 -c 'from schedulerapp.generate_smartsheets import *; generate_report(\"2023-11-09\",\"ctr_raw_data\")'"
+sudo docker exec aiqscheduler bash -c "python3 -c 'from schedulerapp.generate_smartsheets import *; generate_report(\"2023-11-09\",\"intraday_report\")'"
+sudo docker exec aiqscheduler bash -c "python3 -c 'from schedulerapp.generate_smartsheets import *; generate_report(\"2023-11-09\",\"summary_report\")'"
